@@ -6,17 +6,57 @@
 
 body {
     font-family: Georgia, "Times New Roman", serif;
+    line-height: 1.6;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+body.light-theme {
     background-color: #e9e9e9;
     color: #111111;
-    line-height: 1.6;
+}
+
+body.dark-theme {
+    background-color: #1a1a1a;
+    color: #f2f2f2;
+}
+
+.theme-switcher {
+    max-width: 1100px;
+    margin: 20px auto 0;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.theme-switcher button {
+    padding: 12px 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    background-color: #111111;
+    color: #ffffff;
+}
+
+body.dark-theme .theme-switcher button {
+    background-color: #f2f2f2;
+    color: #111111;
 }
 
 .resume {
     max-width: 1100px;
-    margin: 30px auto;
+    margin: 20px auto 30px;
     padding: 40px;
-    background-color: #f3f3f3;
     border: 1px solid #bdbdbd;
+    transition: background-color 0.3s, border-color 0.3s;
+}
+
+body.light-theme .resume {
+    background-color: #f3f3f3;
+    border-color: #bdbdbd;
+}
+
+body.dark-theme .resume {
+    background-color: #242424;
+    border-color: #555555;
 }
 
 .top-section {
@@ -59,6 +99,7 @@ body {
 .contact-block p {
     font-size: 22px;
     margin-bottom: 12px;
+    word-break: break-word;
 }
 
 .content {
@@ -106,6 +147,135 @@ body {
     margin-bottom: 10px;
 }
 
+.comment-card {
+    padding: 18px;
+    border: 1px solid #999999;
+    margin-bottom: 16px;
+    transition: background-color 0.3s, border-color 0.3s;
+}
+
+body.light-theme .comment-card {
+    background-color: #ffffff;
+}
+
+body.dark-theme .comment-card {
+    background-color: #2e2e2e;
+    border-color: #666666;
+}
+
+.comment-card h3 {
+    font-size: 22px;
+    margin-bottom: 8px;
+}
+
+.comment-card p {
+    font-size: 18px;
+    margin-bottom: 8px;
+}
+
+.footer {
+    max-width: 1100px;
+    margin: 0 auto 30px;
+    padding: 30px 40px;
+    border: 1px solid #bdbdbd;
+    transition: background-color 0.3s, border-color 0.3s;
+}
+
+body.light-theme .footer {
+    background-color: #f3f3f3;
+    border-color: #bdbdbd;
+}
+
+body.dark-theme .footer {
+    background-color: #242424;
+    border-color: #555555;
+}
+
+.footer h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.storage-item {
+    font-size: 18px;
+    margin-bottom: 10px;
+    word-break: break-word;
+}
+
+.modal-overlay {
+    position: fixed;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.65);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.modal-window {
+    width: 100%;
+    max-width: 520px;
+    padding: 30px;
+    position: relative;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+body.light-theme .modal-window {
+    background-color: #ffffff;
+    color: #111111;
+}
+
+body.dark-theme .modal-window {
+    background-color: #2a2a2a;
+    color: #f2f2f2;
+}
+
+.modal-window h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.close-modal {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    border: none;
+    background: none;
+    font-size: 28px;
+    cursor: pointer;
+    color: inherit;
+}
+
+.modal-window form {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.modal-window input,
+.modal-window textarea {
+    width: 100%;
+    padding: 14px;
+    font-size: 16px;
+    border: 1px solid #999999;
+    background-color: transparent;
+    color: inherit;
+}
+
+.modal-window button[type="submit"] {
+    padding: 14px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    background-color: #111111;
+    color: #ffffff;
+}
+
+body.dark-theme .modal-window button[type="submit"] {
+    background-color: #f2f2f2;
+    color: #111111;
+}
+
 @media (max-width: 900px) {
     .top-section {
         flex-direction: column;
@@ -126,5 +296,14 @@ body {
 
     .section h2 {
         font-size: 34px;
+    }
+
+    .contact-block p,
+    .item p,
+    .skills-list li,
+    .period,
+    .comment-card p,
+    .storage-item {
+        font-size: 18px;
     }
 }
