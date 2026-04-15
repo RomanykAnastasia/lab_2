@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Романюк Анастасія Сергіївна</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="page">
+        <header class="hero">
+            <div class="hero-left">
+                <h1>Романюк<br>Анастасія</h1>
+                <p class="subtitle">
+                    Студентка спеціальності "Кібербезпека"<br>
+                    Національний університет "Львівська політехніка"<br>
+                    Група КБ-206
+                </p>
+            </div>
+            <div class="hero-right">
+                <h2>Контакти</h2>
+                <p><strong>Email:</strong> nnaskaa007@gmail.com</p>
+            </div>
+        </header>
+
+        <main class="content">
+            <section class="card">
+                <h2>Про сайт</h2>
+                <p>
+                    Це статичний сайт, який роздається через Node.js сервер на Express.
+                    Форма нижче відправляє дані на серверний ендпоінт та надсилає лист на пошту.
+                </p>
+            </section>
+
+            <section class="card">
+                <h2>Форма зворотного зв'язку</h2>
+                <form id="feedbackForm">
+                    <input type="text" id="name" name="name" placeholder="Ім'я" required>
+                    <input type="email" id="email" name="email" placeholder="Email" required>
+                    <input type="text" id="subject" name="subject" placeholder="Тема" required>
+                    <textarea id="message" name="message" placeholder="Повідомлення" rows="6" required></textarea>
+                    <button type="submit">Відправити</button>
+                </form>
+                <p id="status"></p>
+            </section>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
