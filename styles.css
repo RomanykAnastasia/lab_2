@@ -45,7 +45,7 @@ body.dark-theme .theme-switcher button {
     max-width: 1100px;
     margin: 20px auto 30px;
     padding: 40px;
-    border: 1px solid #bdbdbd;
+    border: 1px solid #f70000;
     transition: background-color 0.3s, border-color 0.3s;
 }
 
